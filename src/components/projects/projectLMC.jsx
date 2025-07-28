@@ -27,12 +27,9 @@ export default function ProjectLMC() {
       <style>
         {`
     @media (max-width: 640px) {
-      .vertical-line {
-        display: none !important;
+      .project-container {
+        height: 180vh !important;
       }
-        .project-container{
-        height: 180vh !important;}
-
     }
   `}
       </style>
