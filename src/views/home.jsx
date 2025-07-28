@@ -10,7 +10,7 @@ export default function Home() {
       <div>
         <About />
       </div>
-      <h1 style={{ textAlign: "center", marginTop: "100px" }}>
+      <h1 style={{ textAlign: "center", marginTop: "300px" }}>
         My Biggest Projects
       </h1>
 
