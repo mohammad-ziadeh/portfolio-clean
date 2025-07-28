@@ -1,0 +1,24 @@
+import PartAbout from "../components/partAbout";
+import PartProjects from "../components/partProjects";
+import About from "../components/about";
+import Contact from "../components/partContact";
+
+export default function Home() {
+  return (
+    <div>
+      <PartAbout />
+      <div>
+        <About />
+      </div>
+      <h1 style={{ textAlign: "center", marginTop: "100px" }}>
+        My Biggest Projects
+      </h1>
+
+      <div style={{ marginTop: "150px" }}>
+        <PartProjects />
+      </div>
+
+      <Contact />
+    </div>
+  );
+}
