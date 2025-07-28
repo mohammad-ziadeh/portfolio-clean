@@ -24,8 +24,23 @@ export default function ProjectLMC() {
 
   return (
     <div>
+      <style>
+        {`
+    @media (max-width: 640px) {
+      .vertical-line {
+        display: none !important;
+      }
+        .project-container{
+        height: 180vh !important;}
+
+    }
+  `}
+      </style>
       <ParallaxProvider>
-        <div style={{ height: "240vh", position: "relative" }}>
+        <div
+          className="project-container"
+          style={{ height: "240vh", position: "relative" }}
+        >
           <div
             ref={parallaxRef}
             style={{

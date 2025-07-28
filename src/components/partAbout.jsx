@@ -93,9 +93,22 @@ export default function PartAbout() {
           }
         }
       `}
+
+        {`
+    @media (max-width: 640px) {
+      .vertical-line {
+        display: none !important;
+      }
+        .start{
+        height: 20vh !important;}
+      .name-banner {
+        display: none !important;
+      }
+    }
+  `}
       </style>
       <div>
-        <div style={{ height: "50vh" }}>
+        <div className="start" style={{ height: "50vh" }}>
           <h2 style={{ textAlign: "center" }}>Keep Scrolling</h2>
           <h5 style={{ textAlign: "center" }}>
             use big screen for better experience
@@ -106,6 +119,7 @@ export default function PartAbout() {
           <div style={{ height: "300vh", position: "relative" }}>
             <Parallax speed={-37}>
               <div
+                className="name-banner"
                 style={{
                   position: "absolute",
                   width: "100%",
@@ -131,14 +145,20 @@ export default function PartAbout() {
                   <SiVite size={iconSize} style={iconStyle} /> Vite
                 </h2>
                 <h2 data-aos="fade-right">
-                  <SiJavascript size={iconSize} style={{ ...iconStyle, marginLeft: 4 }} />{" "}
+                  <SiJavascript
+                    size={iconSize}
+                    style={{ ...iconStyle, marginLeft: 4 }}
+                  />{" "}
                   JavaScript (ES6+)
                 </h2>
                 <h2 data-aos="fade-right">
                   <FaBootstrap size={iconSize} style={iconStyle} /> Bootstrap
                 </h2>
                 <h2 data-aos="fade-right">
-                  <SiHtml5 size={iconSize} style={{ ...iconStyle, marginRight: 4 }} />
+                  <SiHtml5
+                    size={iconSize}
+                    style={{ ...iconStyle, marginRight: 4 }}
+                  />
                   HTML,
                   <SiCss3
                     size={iconSize}
@@ -155,15 +175,17 @@ export default function PartAbout() {
                   Backend
                 </h1>
                 <h2 data-aos="fade-left">
-                  <FaPhp size={iconSize} style={iconStyle} /> PHP, <SiMysql style={iconStyle} />{" "}
-                  MySQL
+                  <FaPhp size={iconSize} style={iconStyle} /> PHP,{" "}
+                  <SiMysql style={iconStyle} /> MySQL
                 </h2>
                 <h2 data-aos="fade-left">
-                  <SiLaravel size={iconSize} style={iconStyle} /> Laravel with Breeze & Sanctum
+                  <SiLaravel size={iconSize} style={iconStyle} /> Laravel with
+                  Breeze & Sanctum
                 </h2>
                 <h2 data-aos="fade-left">RESTful API</h2>
                 <h2 data-aos="fade-left">
-                  <SiXampp size={iconSize} style={iconStyle} /> XAMPP for local development
+                  <SiXampp size={iconSize} style={iconStyle} /> XAMPP for local
+                  development
                 </h2>
               </>
             </SectionWrapper>
@@ -172,10 +194,12 @@ export default function PartAbout() {
               <>
                 <h1 style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)" }}>Mobile</h1>
                 <h2 data-aos="fade-right">
-                  <SiFlutter size={iconSize} style={iconStyle} /> Flutter (cross-platform)
+                  <SiFlutter size={iconSize} style={iconStyle} /> Flutter
+                  (cross-platform)
                 </h2>
                 <h2 data-aos="fade-right">
-                  <SiDart size={iconSize} style={iconStyle} /> Dart programming language
+                  <SiDart size={iconSize} style={iconStyle} /> Dart programming
+                  language
                 </h2>
               </>
             </SectionWrapper>
@@ -186,13 +210,15 @@ export default function PartAbout() {
                   Tools & Workflow
                 </h1>
                 <h2 data-aos="fade-left">
-                  <SiPostman size={iconSize} style={iconStyle} /> Postman for API testing
+                  <SiPostman size={iconSize} style={iconStyle} /> Postman for
+                  API testing
                 </h2>
                 <h2 data-aos="fade-left">
                   <FaGithub size={iconSize} style={iconStyle} /> Git & GitHub
                 </h2>
                 <h2 data-aos="fade-left">
-                  <FaFigma size={iconSize} style={iconStyle} /> Figma for UI/UX design
+                  <FaFigma size={iconSize} style={iconStyle} /> Figma for UI/UX
+                  design
                 </h2>
               </>
             </SectionWrapper>
