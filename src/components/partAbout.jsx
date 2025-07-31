@@ -95,7 +95,7 @@ export default function PartAbout() {
       `}
 
         {`
-    @media (max-width: 640px) {
+    @media (max-width: 840px) {
       .vertical-line {
         display: none !important;
       }

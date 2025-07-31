@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <style>
         {`
-    @media (max-width: 640px) {
+    @media (max-width: 840px) {
       .project-title {
         margin-top: 80vh !important;
       }
@@ -20,7 +20,7 @@ export default function Home() {
         <About />
       </div>
       <h1 className="project-title" style={{ textAlign: "center", marginTop: "300px" }}>
-        My Biggest Projects
+        My Latest Projects
       </h1>
 
       <div style={{ marginTop: "150px" }}>

@@ -26,7 +26,7 @@ export default function ProjectLMC() {
     <div>
       <style>
         {`
-    @media (max-width: 640px) {
+    @media (max-width: 840px) {
       .project-container {
         height: 180vh !important;
       }
