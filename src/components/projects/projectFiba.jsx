@@ -2,6 +2,19 @@ import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import "aos/dist/aos.css";
 import React, { useEffect, useState, useRef } from "react";
 import AOS from "aos";
+import { FaReact, FaBootstrap, FaPhp, FaGithub, FaFigma } from "react-icons/fa";
+import {
+  SiVite,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiMysql,
+  SiLaravel,
+  SiFlutter,
+  SiDart,
+  SiPostman,
+  SiXampp,
+} from "react-icons/si";
 
 export default function ProjectFiba() {
   useEffect(() => {
@@ -21,6 +34,29 @@ export default function ProjectFiba() {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const divStyle = {
+    background: "rgba(255, 255, 255, 0.1)",
+    backdropFilter: "blur(10px)",
+    WebkitBackdropFilter: "blur(10px)",
+    borderRadius: "16px",
+    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+    border: "1px solid rgba(255, 255, 255, 0.3)",
+    padding: "20px",
+    marginBottom: "20px",
+  };
+
+  const onMouseEnter = (e) => {
+    e.currentTarget.style.boxShadow = "0 10px 40px rgba(0,0,0,0.3)";
+    e.currentTarget.style.transform = "translateY(-8px)";
+  };
+
+  const onMouseLeave = (e) => {
+    e.currentTarget.style.boxShadow = "0 4px 30px rgba(0,0,0,0.1)";
+    e.currentTarget.style.transform = "translateY(0)";
+  };
+
+  const iconSize = 36;
 
   return (
     <div>
@@ -107,6 +143,28 @@ export default function ProjectFiba() {
               Project Overview
             </h2>
 
+            <br />
+            <br />
+            <br />
+            <section
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "22px",
+              }}
+            >
+              <div style={divStyle} data-aos="fade-up" data-aos-delay="100" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <SiLaravel size={iconSize} />
+              </div>
+              <div style={divStyle} data-aos="fade-up" data-aos-delay="200 " onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <SiFlutter size={iconSize} />
+              </div>
+              <div style={divStyle} data-aos="fade-up" data-aos-delay="300" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <SiPostman size={iconSize} />
+              </div>
+            </section>
+
+            <br />
             {[
               `<strong><em>3x3 Basketball App</em></strong> is a <strong>fully cross-platform experience</strong> designed to revolutionize how 3x3 basketball tournaments are run in <strong>Aqaba</strong> — and soon, across all of <strong>Jordan</strong>. Players can register, build teams, join live events, and follow matches in real time — all from their phones.`,
               `Crafted using <strong>Flutter</strong> for a smooth mobile experience and powered by <strong>Laravel Breeze + Sanctum</strong> for secure, API-first backend control — the app is built for both scalability and performance.`,

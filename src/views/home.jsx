@@ -1,30 +1,45 @@
-import PartAbout from "../components/partAbout";
+import Title from "../components/Title";
+import StudyTimeline from "../components/StudyTimeline";
+import Hero from "../components/Hero";
+import TechStack from "../components/TechStack";
+import SparkAbout from "../components/sparkSection/sparkAbout";
 import PartProjects from "../components/partProjects";
-import About from "../components/about";
 import Contact from "../components/partContact";
+import "aos/dist/aos.css";
+
 
 export default function Home() {
   return (
     <div>
-      <style>
-        {`
-    @media (max-width: 840px) {
-      .project-title {
-        margin-top: 80vh !important;
-      }
-    }
-  `}
-      </style>
-      <PartAbout />
-      <div>
-        <About />
-      </div>
-      <h1 className="project-title" style={{ textAlign: "center", marginTop: "300px" }}>
-        My Latest Projects
-      </h1>
+      <Title />
+      <Hero />
+      <TechStack />
+      <br /><br /><br /><br /><br />
+      <SparkAbout />
+      <StudyTimeline />
+      <PartProjects />
 
-      <div style={{ marginTop: "150px" }}>
-        <PartProjects />
+      <div
+        style={{
+          width: "400px",
+          height: "820px",
+          border: "16px solid black",
+          borderRadius: "30px",
+          overflow: "hidden",
+          margin: "0 auto",
+        }}
+      >
+        <iframe
+          src="/flutter/high_fit/index.html"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            transform: "scale(1)",
+            transformOrigin: "top left",
+          }}
+          title="Flutter App"
+        />
       </div>
 
       <Contact />
