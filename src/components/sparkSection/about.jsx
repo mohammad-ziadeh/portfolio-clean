@@ -7,7 +7,7 @@ export default function About() {
 
 
   const words = `A full-stack developer passionate about turning ideas into real, interactive experiences. 
-Specializing in Laravel for backend development, and React (Vite) and Flutter for building frontend.
+Specializing in Laravel for backend development, React (Vite) and Flutter for building frontend.
 Deeply interested in backend architecture and data handling with Laravel, while currently learning Node.js.
 I Enjoys crafting smooth web animations, with the goal of creating an award-winning website.`;
 
