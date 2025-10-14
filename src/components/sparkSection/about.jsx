@@ -6,9 +6,11 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 export default function About() {
 
 
-  const words = `I’m a full-stack developer who loves turning ideas into real, interactive experiences.  
-I focus on clean architecture, modern UI/UX, and scalable backends using Flutter, Laravel, and React.  
-I enjoy building products that people actually use — from sports tech to learning tools — where creativity meets real-world impact.`;
+  const words = `A full-stack developer passionate about turning ideas into real, interactive experiences. 
+Specializing in Laravel for backend development, and React (Vite) and Flutter for building frontend.
+Deeply interested in backend architecture and data handling with Laravel, while currently learning Node.js.
+I Enjoys crafting smooth web animations, with the goal of creating an award-winning website.`;
+
 
 
   const downloadBtnStyle = {
@@ -47,7 +49,7 @@ I enjoy building products that people actually use — from sports tech to learn
 
   return (
     <div style={{ maxWidth: '1500px' }}>
-      <div style={{ height: "100vh", position: "relative", textAlign:'center' }}>
+      <div style={{ height: "100vh", position: "relative", textAlign: 'center' }}>
 
         <TextGenerateEffect words={words} />
         <br /><br /><br /><br /><br /><br />

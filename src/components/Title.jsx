@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
-
+import "aos/dist/aos.css";
 export default function Title() {
   return (
     <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md mt-50 mb-40">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20" data-aos="zoom-in">
         MOHAMMAD ZIADEH
       </h1>
       <div className="w-[80rem] h-80 relative">

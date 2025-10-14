@@ -45,23 +45,24 @@ export default function TechStack() {
 
     return (
         <ul
-            className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2"
+            className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-11 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2"
             style={{ maxWidth: "1500px", margin: "0 auto", padding: "0 1rem" }}
         >
             <GridItem
+                area="md:[grid-area:1/7/2/12] xl:[grid-area:2/1/3/5]"
+
+                icons={techGroups[4].icons}
+                title="No-Code & CMS"
+                description="Webflow & Shopify for no-code sites, Strapi for headless CMS"
+            />
+            <GridItem
                 area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-                icons={techGroups[0].icons}
-                title="Frontend"
-                description="Web interfaces & UI libraries"
+                icons={techGroups[3].icons}
+                title="Tools & Workflow"
+                description="Development & design tools"
             />
             <GridItem
-                area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-                icons={techGroups[1].icons}
-                title="Backend"
-                description="Server-side programming & databases"
-            />
-            <GridItem
-                area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
+                area="md:[grid-area:3/1/4/12] xl:[grid-area:2/8/3/12]"
 
                 icon={<Lock className="h-4 w-4  text-neutral-400" />}
                 icons={techGroups[2].icons}
@@ -69,17 +70,20 @@ export default function TechStack() {
                 description="Cross-platform mobile development"
             />
             <GridItem
-                area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-                icons={techGroups[4].icons}
-                title="No-Code & CMS"
-                description="Webflow & Shopify for no-code sites, Strapi for headless CMS"
+                area="md:[grid-area:2/7/3/12] xl:[grid-area:1/8/2/12]"
+
+                icons={techGroups[0].icons}
+                title="Frontend"
+                description="Web interfaces & UI libraries"
             />
             <GridItem
-                area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-                icons={techGroups[3].icons}
-                title="Tools & Workflow"
-                description="Development & design tools"
+                area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
+                icons={techGroups[1].icons}
+                title="Backend"
+                description="Server-side programming & databases"
             />
+
+
         </ul>
     );
 }

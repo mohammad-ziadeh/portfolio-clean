@@ -13,11 +13,14 @@ export default function Home() {
     <div>
       <Title />
       <Hero />
+      <h1 data-aos="fade-up" className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20" style={{ marginTop: "-200px" }}>Skills & Tech</h1>
+      <br /><br /><br />
       <TechStack />
-      <br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br />
       <SparkAbout />
       <StudyTimeline />
-      <PartProjects />
+      {/* <PartProjects />
 
       <div
         style={{
@@ -40,8 +43,9 @@ export default function Home() {
           }}
           title="Flutter App"
         />
-      </div>
-
+      </div> */}
+      <br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br />
       <Contact />
     </div>
   );

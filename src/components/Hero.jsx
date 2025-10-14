@@ -7,59 +7,37 @@ export default function Hero() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "LMC",
+    link: "https://github.com/mohammad-ziadeh/masterpiece_backEnd",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "LMCBanner.png",
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
+    title: "Basketball Events Manger App",
+    link: "https://github.com/mohammad-ziadeh/3X3_FIBA",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      "basketballBanner.png",
   },
 
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "Brands Clothes Website",
+    link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "shopifyBanner.png",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "Electronics E-commerce Website",
+    link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      "megaBanner.png",
   },
   {
-    title: "Editorially",
-    link: "https://editorially.org",
+    title: "Architect Portfolio",
+    link: "",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      "EyadProtBanner.png",
   },
 
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
+
+
 ];
