@@ -258,6 +258,7 @@ export const Particles = ({
       aria-hidden="true"
       {...props}>
       <canvas ref={canvasRef} className="size-full" />
+
     </div>
   );
 }
