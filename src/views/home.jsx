@@ -9,7 +9,7 @@ import Contact from "../components/partContact";
 import "aos/dist/aos.css";
 import gsap from "gsap";
 import SplitType from "split-type";
-import "./Preloader.css";
+import "./preloader.css";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
