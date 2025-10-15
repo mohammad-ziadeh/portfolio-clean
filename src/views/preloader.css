@@ -18,7 +18,7 @@ body {
 
 .content {
   position: relative;
-  visibility: hidden; /* will be set visible by GSAP */
+  visibility: hidden;
   min-height: 100vh;
 }
 

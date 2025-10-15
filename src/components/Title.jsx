@@ -1,7 +1,7 @@
 
 "use client";
 import React from "react";
-import { SparklesCore } from "./ui/sparkles";
+// import { SparklesCore } from "./ui/sparkles";
 import "aos/dist/aos.css";
 import { Vortex } from "./ui/vortex";
 
