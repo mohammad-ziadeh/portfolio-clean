@@ -10,32 +10,32 @@ export const products = [
     title: "LMC",
     link: "https://github.com/mohammad-ziadeh/masterpiece_backEnd",
     thumbnail:
-      "LMCBanner.png",
+      "LMCBanner.webp",
   },
   {
     title: "Basketball Events Manger App",
     link: "https://github.com/mohammad-ziadeh/3X3_FIBA",
     thumbnail:
-      "basketballBanner.png",
+      "basketballBanner.webp",
   },
 
   {
     title: "Brands Clothes Website",
     link: "",
     thumbnail:
-      "shopifyBanner.png",
+      "shopifyBanner.webp",
   },
   {
     title: "Electronics E-commerce Website",
     link: "",
     thumbnail:
-      "megaBanner.png",
+      "megaBanner.webp",
   },
   {
     title: "Architect Portfolio",
     link: "",
     thumbnail:
-      "EyadProtBanner.png",
+      "EyadProtBanner.webp",
   },
 
 

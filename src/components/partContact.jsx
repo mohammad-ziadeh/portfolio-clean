@@ -11,6 +11,8 @@ import {
   FaTools,
   FaLaptopCode,
 } from "react-icons/fa";
+import { Particles } from "@/components/ui/particles";
+
 
 export default function Contact() {
   useEffect(() => {
@@ -42,6 +44,9 @@ export default function Contact() {
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       }}
     >
+      <div className="relative h-[500px] w-full overflow-hidden">
+        <Particles />
+      </div>
       <h2
         style={{
           fontSize: "clamp(2rem, 5vw, 3rem)",
