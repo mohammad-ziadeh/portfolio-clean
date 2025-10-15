@@ -74,7 +74,7 @@ const Home = () => {
   }, []);
 
   return <div>
-    <div className="content" ref={contentRef} style={{ visibility: "visible" }}>
+    <div className="content" ref={contentRef} style={{ pointerEvents: "auto" }}>
       <Title />
       <Hero />
       <h1
