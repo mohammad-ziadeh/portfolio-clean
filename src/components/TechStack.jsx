@@ -16,32 +16,50 @@ import {
 } from "react-icons/si";
 import { Lock } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 export default function TechStack() {
     const techGroups = [
         {
             icons: [
-                <FaReact />,
-                <SiVite />,
-                <SiJavascript />,
-                <SiHtml5 />,
-                <SiCss3 />,
-                <FaBootstrap />,
+                { id: 1, name: "React", icon: <FaReact /> },
+                { id: 2, name: "Vite", icon: <SiVite /> },
+                { id: 3, name: "JavaScript", icon: <SiJavascript /> },
+                { id: 4, name: "HTML5", icon: <SiHtml5 /> },
+                { id: 5, name: "CSS3", icon: <SiCss3 /> },
+                { id: 6, name: "Bootstrap", icon: <FaBootstrap /> },
             ],
         },
         {
-            icons: [<FaPhp />, <SiMysql />, <SiLaravel />, <SiXampp />],
+            icons: [
+                { id: 7, name: "PHP", icon: <FaPhp /> },
+                { id: 8, name: "MySQL", icon: <SiMysql /> },
+                { id: 9, name: "Laravel", icon: <SiLaravel /> },
+                { id: 10, name: "XAMPP", icon: <SiXampp /> },
+            ],
         },
         {
-            icons: [<SiFlutter />, <SiDart />],
+            icons: [
+                { id: 11, name: "Flutter", icon: <SiFlutter /> },
+                { id: 12, name: "Dart", icon: <SiDart /> },
+            ],
         },
         {
-            icons: [<SiPostman />, <FaGithub />, <FaFigma />],
+            icons: [
+                { id: 13, name: "Postman", icon: <SiPostman /> },
+                { id: 14, name: "GitHub", icon: <FaGithub /> },
+                { id: 15, name: "Figma", icon: <FaFigma /> },
+            ],
         },
         {
-            icons: [<FaShopify />, <SiWebflow />, <SiStrapi />],
+            icons: [
+                { id: 16, name: "Shopify", icon: <FaShopify /> },
+                { id: 17, name: "Webflow", icon: <SiWebflow /> },
+                { id: 18, name: "Strapi", icon: <SiStrapi /> },
+            ],
         },
     ];
+
 
     return (
         <ul
@@ -97,18 +115,20 @@ const GridItem = ({ area, icons, title, description }) => {
                     glow={true}
                     disabled={false}
                     proximity={64}
-                    inactiveZone={0.01}
+                    inactiveZone={0.5}
                 />
                 <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 shadow-[0px_0px_27px_0px_#2D2D2D]">
                     <div className="relative flex flex-1 flex-col justify-between gap-3">
                         <div>
                             <ul className="flex flex-wrap gap-2">
+
                                 {icons.map((icon, index) => (
+
                                     <li
                                         key={index}
                                         className="flex items-center justify-center rounded-lg border border-gray-600 text-neutral-400 p-2 md:p-3 text-1xl md:text-2xl"
                                     >
-                                        {icon}
+                                        <AnimatedTooltip items={[icon]} />
                                     </li>
                                 ))}
                             </ul>

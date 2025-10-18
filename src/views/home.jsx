@@ -96,7 +96,7 @@ const Home = () => {
       <Contact />
     </div>
 
-    <div className="preloader" ref={preloaderRef}>
+    {/* <div className="preloader" ref={preloaderRef}>
       <div className="progress-container">
         <div className="progress-bar" ref={progressBarRef}></div>
       </div>
@@ -109,7 +109,7 @@ const Home = () => {
         </div>
       </div>
       <div className="percentage" ref={percentageRef}>100</div>
-    </div>
+    </div> */}
   </div>
 };
 
