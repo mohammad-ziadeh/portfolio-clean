@@ -12,9 +12,8 @@ import "./preloader.css";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(() => {
-    // Check if user has already visited in this session
     const hasVisited = sessionStorage.getItem("hasVisited");
-    return !hasVisited; // show preloader only if not visited yet
+    return !hasVisited; 
   });
 
   const preloaderRef = useRef(null);
@@ -25,7 +24,7 @@ const Home = () => {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    if (!isLoading) return; // skip preloader animation if already visited
+    if (!isLoading) return; 
 
     const loadingText = new SplitType(loadingInitialRef.current, { types: "chars" });
     const completeText = new SplitType(loadingCompleteRef.current, { types: "chars" });
@@ -54,7 +53,7 @@ const Home = () => {
 
     const tl = gsap.timeline({
       onComplete: () => {
-        sessionStorage.setItem("hasVisited", "true"); // store flag
+        sessionStorage.setItem("hasVisited", "true");
         setIsLoading(false);
         document.body.style.overflow = "auto";
       },
