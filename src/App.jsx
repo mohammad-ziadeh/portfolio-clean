@@ -38,9 +38,9 @@ export default function App() {
           menuButtonColor="#fff"
           openMenuButtonColor="#000"
           changeMenuColorOnOpen={true}
-          colors={['#B19EEF', '#5227FF']}
+          colors={['#3D0000', '#1E201E']}
           logoUrl="/pfp.png"
-          accentColor="#ff6b6b"
+          accentColor="#8E1616"
         // onMenuOpen={() => console.log('Menu opened')}
         // onMenuClose={() => console.log('Menu closed')}
         />
