@@ -1,9 +1,7 @@
 
 "use client";
 import React from "react";
-// import { SparklesCore } from "./ui/sparkles";
 import "aos/dist/aos.css";
-import { Vortex } from "./ui/vortex";
 import TextPressure from './ui/TextPressure';
 
 
