@@ -50,6 +50,7 @@ export const Timeline = ({
               </div>
               <h3
                 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold  text-neutral-500 ">
+                <h2 className="hidden md:block text-xl font-bold  text-neutral-500 " style={{textAlign:"left"}}>{item.month}</h2>
                 {item.title}
               </h3>
             </div>

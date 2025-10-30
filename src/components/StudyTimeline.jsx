@@ -4,32 +4,20 @@ import { Timeline } from "@/components/ui/timeline";
 export default function StudyTimeline() {
   const data = [
     {
-      title: "2025",
+      month: "",
+      title: "2022",
       content: (
         <div className="text-neutral-200">
           <p className="mb-4 text-xl font-normal">
-            Completed a full-stack, 6-month cross-platform development training
-            at Orange Coding Academy (OCA), focusing on React.js, Laravel,
-            Flutter, Dart, and MySQL. Built real-world projects with clean UI/UX
-            and agile practices.
+            Completed the two-year English Access Microscholarship from the U.S.
+            Embassy, strengthening communication skills and academic
+            proficiency.
           </p>
         </div>
       ),
     },
     {
-      title: "2024",
-      content: (
-        <div className="text-neutral-200">
-          <p className="mb-4 text-xl font-normal">
-            Built and launched my first major projects:{" "}
-            <strong>3x3 Basketball App</strong> and{" "}
-            <strong>LMC – Learning Management Center</strong>, demonstrating
-            skills in Flutter, Laravel, React.js, and MySQL.
-          </p>
-        </div>
-      ),
-    },
-    {
+      month: "",
       title: "2023",
       content: (
         <div className="text-neutral-200">
@@ -44,17 +32,35 @@ export default function StudyTimeline() {
       ),
     },
     {
-      title: "2022",
+      month: "MAY",
+      title: "2025",
       content: (
         <div className="text-neutral-200">
           <p className="mb-4 text-xl font-normal">
-            Completed the two-year English Access Microscholarship from the U.S.
-            Embassy, strengthening communication skills and academic
-            proficiency.
+            Completed a full-stack, 6-month cross-platform development training
+            at Orange Coding Academy (OCA), focusing on React.js, Laravel,
+            Flutter, Dart, and MySQL. Built real-world projects with clean UI/UX
+            and agile practices.
           </p>
         </div>
       ),
     },
+    {
+      month: "JUNE",
+      title: "2025",
+      content: (
+        <div className="text-neutral-200">
+          <p className="mb-4 text-xl font-normal">
+            Built and launched my first major projects:{" "}
+            <strong>3x3 Basketball App</strong> and{" "}
+            <strong>LMC – Learning Management Center</strong>, demonstrating
+            skills in Flutter, Laravel, React.js, and MySQL.
+          </p>
+        </div>
+      ),
+    },
+
+
   ];
 
   return (

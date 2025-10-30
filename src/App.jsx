@@ -1,12 +1,28 @@
 import { Outlet } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import StaggeredMenu from './components/ui/StaggeredMenu';
+import gsap from 'gsap'
+import { ReactLenis } from 'lenis/react'
+import { useEffect, useRef } from 'react'
 
 const queryClient = new QueryClient();
 
 export default function App() {
 
-  // nav menu items
+  // {{-- smooth scroll setup --}} //
+  const lenisRef = useRef()
+
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.lenis?.raf(time * 1000)
+    }
+
+    gsap.ticker.add(update)
+
+    return () => gsap.ticker.remove(update)
+  }, [])
+
+  // {{--nav menu items--}} //
   const menuItems = [
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
     { label: 'Soon', ariaLabel: 'Learn about us', link: '/' },
@@ -27,30 +43,34 @@ export default function App() {
   ];
 
   return (
-    <div>
-      <div style={{ height: '100vh', background: 'transparent', zIndex: 999, position: 'fixed', top: 0, left: 0, width: '100%' }}>
-        <StaggeredMenu
-          position="right"
-          items={menuItems}
-          socialItems={socialItems}
-          displaySocials={true}
-          displayItemNumbering={true}
-          menuButtonColor="#fff"
-          openMenuButtonColor="#000"
-          changeMenuColorOnOpen={true}
-          colors={['#1E201E', '#3D0000']}
-          logoUrl="/pfp.png"
-          accentColor="#8E1616"
-        // onMenuOpen={() => console.log('Menu opened')}
-        // onMenuClose={() => console.log('Menu closed')}
-        />
+    <>
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
+
+      <div>
+        <div style={{ height: '100vh', background: 'transparent', zIndex: 999, position: 'fixed', top: 0, left: 0, width: '100%' }}>
+          <StaggeredMenu
+            position="right"
+            items={menuItems}
+            socialItems={socialItems}
+            displaySocials={true}
+            displayItemNumbering={true}
+            menuButtonColor="#fff"
+            openMenuButtonColor="#000"
+            changeMenuColorOnOpen={true}
+            colors={['#1E201E', '#3D0000']}
+            logoUrl="/pfp.png"
+            accentColor="#8E1616"
+          // onMenuOpen={() => console.log('Menu opened')}
+          // onMenuClose={() => console.log('Menu closed')}
+          />
+        </div>
+        <main>
+          <QueryClientProvider client={queryClient}>
+            <Outlet />
+          </QueryClientProvider>
+        </main>
+        {/* <Footer /> */}
       </div>
-      <main>
-        <QueryClientProvider client={queryClient}>
-          <Outlet />
-        </QueryClientProvider>
-      </main>
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 }
