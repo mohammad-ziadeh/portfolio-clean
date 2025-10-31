@@ -11,13 +11,13 @@ export default function ProjectFiba() {
       <h4 className="font-bold text-4xl text-neutral-100 text-center mb-10">Project  <FlipWords words={words} /> </h4>
 
       <DotLottieReact
-        src="/public/lottie/Scroll Down Arrows.json"
+        src="/lottie/Scroll Down Arrows.json"
         loop
         autoplay
         style={{
-          width: '210px',   
-          height: '120px',  
-          margin: '0 auto', 
+          width: '210px',
+          height: '120px',
+          margin: '0 auto',
         }}
       />
       <div className="max-w-[1203px] m-auto mt-50 relative">
