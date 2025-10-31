@@ -10,7 +10,7 @@ export default function ProjectLMC() {
       <h4 className="font-bold text-4xl text-white text-center mb-10">Project <FlipWords words={words} /></h4>
 
       <DotLottieReact
-        src="/lottie/Scroll Down Arrows.json"
+        src="/lottie/Scroll_Down_Arrows.json"
         loop
         autoplay
         style={{
