@@ -25,17 +25,11 @@ export default function App() {
   // {{--nav menu items--}} //
   const menuItems = [
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-    { label: 'Soon', ariaLabel: 'Learn about us', link: '/' },
-    { label: 'Soon', ariaLabel: 'View our services', link: '/' },
+    { label: 'About', ariaLabel: 'Learn about us', link: '/About' },
+    { label: 'Projects', ariaLabel: 'View our services', link: '/Projects' },
     { label: 'Soon', ariaLabel: 'Get in touch', link: '/' }
   ];
 
-  //   const menuItems = [
-  //   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-  //   { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
-  //   { label: 'Services', ariaLabel: 'View our services', link: '/services' },
-  //   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
-  // ];
 
   const socialItems = [
     { label: 'GitHub', link: 'https://github.com/mohammad-ziadeh' },
@@ -47,23 +41,21 @@ export default function App() {
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
 
       <div>
-        <div style={{ height: '100vh', background: 'transparent', zIndex: 999, position: 'fixed', top: 0, left: 0, width: '100%' }}>
-          <StaggeredMenu
-            position="right"
-            items={menuItems}
-            socialItems={socialItems}
-            displaySocials={true}
-            displayItemNumbering={true}
-            menuButtonColor="#fff"
-            openMenuButtonColor="#000"
-            changeMenuColorOnOpen={true}
-            colors={['#1E201E', '#3D0000']}
-            logoUrl="/pfp.png"
-            accentColor="#8E1616"
-          // onMenuOpen={() => console.log('Menu opened')}
-          // onMenuClose={() => console.log('Menu closed')}
-          />
-        </div>
+        <StaggeredMenu
+          position="right"
+          items={menuItems}
+          socialItems={socialItems}
+          displaySocials={true}
+          displayItemNumbering={true}
+          menuButtonColor="#fff"
+          openMenuButtonColor="#000"
+          changeMenuColorOnOpen={true}
+          colors={['#1E201E', '#3D0000']}
+          logoUrl="images/pfp.png"
+          accentColor="#8E1616"
+        // onMenuOpen={() => console.log('Menu opened')}
+        // onMenuClose={() => console.log('Menu closed')}
+        />
         <main>
           <QueryClientProvider client={queryClient}>
             <Outlet />

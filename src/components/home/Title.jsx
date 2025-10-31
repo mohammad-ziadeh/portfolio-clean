@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import "aos/dist/aos.css";
-import TextPressure from './ui/TextPressure';
+import TextPressure from '../ui/TextPressure';
 
 
 

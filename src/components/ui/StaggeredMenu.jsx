@@ -9,11 +9,11 @@ export const StaggeredMenu = ({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = '/src/assets/logos/reactbits-gh-white.svg',
+  logoUrl = 'images/pfp.png',
   menuButtonColor = '#fff',
   openMenuButtonColor = '#fff',
   changeMenuColorOnOpen = true,
-  isFixed = false,
+  isFixed = true,
   accentColor = '#5227FF',
   onMenuOpen,
   onMenuClose
@@ -317,7 +317,11 @@ export const StaggeredMenu = ({
 
   return (
     <div
-      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}>
+      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}
+      style={{
+        pointerEvents: open ? 'auto' : 'none',
+      }}
+    >
       <div
         className={(className ? className + ' ' : '') + 'staggered-menu-wrapper relative w-full h-full'}
         style={accentColor ? { ['--sm-accent']: accentColor } : undefined}
@@ -350,7 +354,7 @@ export const StaggeredMenu = ({
             className="sm-logo flex items-center select-none pointer-events-auto"
             aria-label="Logo">
             <img
-            style={{width: '70px', height: '70px', borderRadius: '50%'}}
+              style={{ width: '70px', height: '70px', borderRadius: '50%' }}
               src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
               alt="Logo"
               className="sm-logo-img block h-16 w-auto object-contain"

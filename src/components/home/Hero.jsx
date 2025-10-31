@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HeroParallax } from "./ui/hero-parallax";
+import { HeroParallax } from "../ui/hero-parallax";
 
 export default function Hero() {
   return <HeroParallax products={products} />;
@@ -8,34 +8,34 @@ export default function Hero() {
 export const products = [
   {
     title: "LMC",
-    link: "https://github.com/mohammad-ziadeh/masterpiece_backEnd",
+    link: "/Projects",
     thumbnail:
-      "LMCBanner.webp",
+      "images/LMCBanner.webp",
   },
   {
     title: "Basketball Events Manger App",
-    link: "https://github.com/mohammad-ziadeh/3X3_FIBA",
+    link: "/Projects",
     thumbnail:
-      "basketballBanner.webp",
+      "images/basketballBanner.webp",
   },
 
   {
     title: "Brands Clothes Website",
-    link: "",
+    link: "/Projects",
     thumbnail:
-      "shopifyBanner.webp",
+      "images/shopifyBanner.webp",
   },
   {
     title: "Electronics E-commerce Website",
-    link: "",
+    link: "/Projects",
     thumbnail:
-      "megaBanner.webp",
+      "images/megaBanner.webp",
   },
   {
     title: "Architect Portfolio",
-    link: "",
+    link: "/Projects",
     thumbnail:
-      "EyadProtBanner.webp",
+      "images/EyadProtBanner.webp",
   },
 
 

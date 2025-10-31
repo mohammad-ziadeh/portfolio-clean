@@ -21,7 +21,12 @@ const LoaderWrapper = styled('div')(({ theme }) => ({
 const Loader = () => {
   return (
     <LoaderWrapper>
-      <LinearProgress color="secondary" />
+      <LinearProgress sx={{
+        backgroundColor: 'rgba(255, 255, 255, 0.2)', // track color
+        '& .MuiLinearProgress-bar': {
+          backgroundColor: '#fff' // bar color
+        }
+      }} />
     </LoaderWrapper>
   );
 };

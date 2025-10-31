@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import Title from "../components/Title";
-import StudyTimeline from "../components/StudyTimeline";
-import Hero from "../components/Hero";
-import TechStack from "../components/TechStack";
+import Title from "../components/home/Title";
+import StudyTimeline from "../components/home/StudyTimeline";
+import Hero from "../components/home/Hero";
+import TechStack from "../components/home/TechStack";
 import SparkAbout from "../components/sparkSection/sparkAbout";
-import Contact from "../components/partContact";
+import Contact from "../components/home/partContact";
 import "aos/dist/aos.css";
 import gsap from "gsap";
 import SplitType from "split-type";
@@ -13,7 +13,7 @@ import "./preloader.css";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(() => {
     const hasVisited = sessionStorage.getItem("hasVisited");
-    return !hasVisited; 
+    return !hasVisited;
   });
 
   const preloaderRef = useRef(null);
@@ -24,7 +24,7 @@ const Home = () => {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    if (!isLoading) return; 
+    if (!isLoading) return;
 
     const loadingText = new SplitType(loadingInitialRef.current, { types: "chars" });
     const completeText = new SplitType(loadingCompleteRef.current, { types: "chars" });
