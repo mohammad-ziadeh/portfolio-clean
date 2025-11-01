@@ -72,7 +72,7 @@ export default function ProjectLMC() {
         >
         </div>
       </div>
-      <h4 className="font-bold text-2xl text-white text-center mt-60">Used Colors</h4>
+      <h4 className="font-bold text-2xl text-white text-center mt-60">Colors Used</h4>
       <div className="mt-20 flex justify-center" >
 
         <AnimatedTooltip circleColors={colors} />
