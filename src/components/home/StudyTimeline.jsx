@@ -3,34 +3,7 @@ import { Timeline } from "@/components/ui/timeline";
 
 export default function StudyTimeline() {
   const data = [
-    {
-      month: "",
-      title: "2022",
-      content: (
-        <div className="text-neutral-200">
-          <p className="mb-4 text-xl font-normal">
-            Completed the two-year English Access Microscholarship from the U.S.
-            Embassy, strengthening communication skills and academic
-            proficiency.
-          </p>
-        </div>
-      ),
-    },
-    {
-      month: "",
-      title: "2023",
-      content: (
-        <div className="text-neutral-200">
-          <p className="mb-4 text-xl font-normal">
-            Participated in various certifications and programs:
-          </p>
-          <ul className="list-disc ml-5 text-lg">
-            <li>National Geographic LIFE Level 5B – March 2023</li>
-            <li>English Language Olympics (ELO 2022) – May 2022</li>
-          </ul>
-        </div>
-      ),
-    },
+
     {
       month: "MAY",
       title: "2025",
@@ -59,7 +32,34 @@ export default function StudyTimeline() {
         </div>
       ),
     },
-
+    {
+      month: "",
+      title: "2023",
+      content: (
+        <div className="text-neutral-200">
+          <p className="mb-4 text-xl font-normal">
+            Participated in various certifications and programs:
+          </p>
+          <ul className="list-disc ml-5 text-lg">
+            <li>National Geographic LIFE Level 5B – March 2023</li>
+            <li>English Language Olympics (ELO 2022) – May 2022</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      month: "",
+      title: "2022",
+      content: (
+        <div className="text-neutral-200">
+          <p className="mb-4 text-xl font-normal">
+            Completed the two-year English Access Microscholarship from the U.S.
+            Embassy, strengthening communication skills and academic
+            proficiency.
+          </p>
+        </div>
+      ),
+    },
 
   ];
 

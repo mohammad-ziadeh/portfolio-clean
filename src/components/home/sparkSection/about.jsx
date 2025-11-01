@@ -1,6 +1,6 @@
 "use client";
 import "aos/dist/aos.css";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { TextGenerateEffect } from "../../ui/text-generate-effect";
 
 
 export default function About() {

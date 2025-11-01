@@ -3,7 +3,7 @@ import Title from "../components/home/Title";
 import StudyTimeline from "../components/home/StudyTimeline";
 import Hero from "../components/home/Hero";
 import TechStack from "../components/home/TechStack";
-import SparkAbout from "../components/sparkSection/sparkAbout";
+import SparkAbout from "../components/home/sparkSection/sparkAbout";
 import Contact from "../components/home/partContact";
 import "aos/dist/aos.css";
 import gsap from "gsap";
@@ -82,18 +82,21 @@ const Home = () => {
       {/* Main content */}
       <div className="content" ref={contentRef} style={{ pointerEvents: "auto" }}>
         <Title />
-        <Hero />
         <h1
           data-aos="fade-up"
-          className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20"
-          style={{ marginTop: "-200px" }}
+          className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20 mt-100 mb-40"
+
         >
           Skills & Tech
         </h1>
-        <br /><br /><br />
+
         <TechStack />
+        <br /><br /><br />
+
         <br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br />
+        <Hero />
+
         <SparkAbout />
         <StudyTimeline />
         <br /><br /><br /><br /><br /><br /><br />

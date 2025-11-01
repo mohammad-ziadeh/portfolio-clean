@@ -1,7 +1,7 @@
 const SAFARI_WIDTH = 1203
 const SAFARI_HEIGHT = 623
 const SCREEN_X = 1
-const SCREEN_Y = 37
+const SCREEN_Y = 52
 const SCREEN_WIDTH = 1200
 const SCREEN_HEIGHT = 600
 

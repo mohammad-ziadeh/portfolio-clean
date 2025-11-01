@@ -1,7 +1,7 @@
 "use client";
 import "aos/dist/aos.css";
 import About from "./about";
-import { SparklesCore } from "../ui/sparkles";
+import { SparklesCore } from "../../ui/sparkles";
 
 
 export default function SparkAbout() {

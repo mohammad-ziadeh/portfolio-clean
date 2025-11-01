@@ -209,7 +209,6 @@ export default function BubbleMenu({
         <div
           ref={overlayRef}
           className={[
-            '-mt-40',
             'bubble-menu-items',
             useFixedPosition ? 'fixed' : 'absolute',
             'inset-0',

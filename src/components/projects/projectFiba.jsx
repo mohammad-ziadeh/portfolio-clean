@@ -1,10 +1,25 @@
 import { Safari } from "@/components/ui/safari"
 import { FlipWords } from "@/components/ui/flip-words";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { AnimatedTooltip } from "@/components/ui/color-circles"
 
 
 export default function ProjectFiba() {
   const words = ["Basketball 3X3"];
+  const colors = [
+
+    {
+      id: 1,
+      name: "#040404",
+      color: "#040404",
+    },
+
+    {
+      id: 2,
+      name: "#eeeeee",
+      color: "#eeeeee",
+    },
+  ];
 
   return (
     <div className="relative min-h-screen mt-170">
@@ -41,7 +56,11 @@ export default function ProjectFiba() {
           }}
         />
       </div>
+      <h4 className="font-bold text-2xl text-white text-center mt-60">Used Colors</h4>
+      <div className="mt-20 flex justify-center" >
 
+        <AnimatedTooltip circleColors={colors} />
+      </div>
     </div>
 
   )
