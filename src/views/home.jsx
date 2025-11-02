@@ -84,7 +84,7 @@ const Home = () => {
         <Title />
         <h1
           data-aos="fade-up"
-          className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20 mt-100 mb-40"
+          className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20 mt-100 mb-20"
 
         >
           Skills & Tech
@@ -99,9 +99,8 @@ const Home = () => {
 
         <SparkAbout />
         <StudyTimeline />
-        <br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br />
         <Contact />
+     
       </div>
 
       {/* Preloader */}

@@ -19,7 +19,7 @@ const Projects = () => {
         {
             label: "3X3",
             ariaLabel: "3X3",
-            rotation: 8,
+            rotation: 0,
             hoverStyles: { bgColor: "#3D0000", textColor: "#ffffff" },
             selectedStyles: activeTab === "3X3" ? { bgColor: "#3D0000", textColor: "#ffffff" } : { bgColor: "#fff", textColor: "#000" },
 
@@ -37,7 +37,7 @@ const Projects = () => {
         {
             label: "soon2",
             ariaLabel: "Soon2",
-            rotation: 8,
+            rotation: 0,
             hoverStyles: { bgColor: "#3D0000", textColor: "#ffffff" },
             selectedStyles: activeTab === "soon2" ? { bgColor: "#3D0000", textColor: "#ffffff" } : { bgColor: "#fff", textColor: "#000" },
             onClick: () => setActiveTab("soon2"),
@@ -45,7 +45,7 @@ const Projects = () => {
         {
             label: "soon3",
             ariaLabel: "Soon3",
-            rotation: -8,
+            rotation: 0,
             hoverStyles: { bgColor: "#3D0000", textColor: "#ffffff" },
             selectedStyles: activeTab === "soon3" ? { bgColor: "#3D0000", textColor: "#ffffff" } : { bgColor: "#fff", textColor: "#000" },
             onClick: () => setActiveTab("soon3"),
@@ -61,7 +61,7 @@ const Projects = () => {
             case "soon1":
                 return <ProjectLMC />;
             case "soon2":
-                return <ProjectLMC />;
+                return <ProjectLMC />; 
             case "soon3":
                 return <ProjectLMC />;
             default :

@@ -64,7 +64,7 @@ export default function StudyTimeline() {
   ];
 
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip border-b-2 border-white">
       <Timeline data={data} />
     </div>
   );
