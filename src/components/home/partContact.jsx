@@ -28,7 +28,7 @@ export default function ContactForm() {
           data-aos="fade-down"
           className="text-3xl md:text-5xl font-bold mb-8 text-center"
         >
-          Let’s Connect
+          Let’s Collab
         </h2>
 
         {state.succeeded && (
