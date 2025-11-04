@@ -82,7 +82,6 @@ const Projects = () => {
             />
 
             <div className="mt-10 z-9">{renderContent()}</div>
-            <div style={{ height: "50vh" }} />
         </div>
     );
 };

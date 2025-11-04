@@ -61,12 +61,13 @@ export const HeroParallax = ({ products }) => {
 export const Header = () => (
   <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
     <h1 className="text-2xl md:text-7xl font-bold text-white">
-      PROJECTS <br /> IN PROGRESS
+      COMPLETED <br /> PROJECTS
     </h1>
     <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
-      These are projects I am currently developing. While they are not live yet, they are waiting for the right person to bring them to life, Contact me if you want to.
+      Here are some of the projects I have successfully built and finished. Each demonstrates my skills and attention to detail—feel free to explore them and get in touch if you'd like to collaborate.
     </p>
   </div>
+
 );
 
 export const ProductCard = ({ product, translate }) => {

@@ -27,16 +27,15 @@ export default function Contact() {
         { title: "Name", description: "Mohammad Emad Ziadeh — Full Stack Developer.", link: "#", icon: <FaUser style={iconStyle} /> },
         { title: "Phone", description: "+962 791318735 \n Reach out for collaborations or project discussions.", link: "tel:+962791318735", icon: <FaPhoneAlt style={iconStyle} /> },
         { title: "GitHub", description: "Explore my open-source projects and contributions.", link: "https://github.com/mohammad-ziadeh", icon: <FaGithub style={iconStyle} /> },
-        { title: "Contact Form", description: "Contact me via the email form", link: "/Contact", icon: <FaMailBulk style={iconStyle} /> },
+        { title: "Contact Form", description: "Contact me via the email form", link: "#contactForm", icon: <FaMailBulk style={iconStyle} /> },
         { title: "LinkedIn", description: "Connect with me professionally and explore my network.", link: "https://www.linkedin.com/in/mohammad-ziadeh-a8400335b/", icon: <FaLinkedin style={iconStyle} /> },
     ];
 
     return (
-        <div className="border-white border-t-2">
             <BackgroundBeamsWithCollision>
                 <div className="relative w-full overflow-hidden mt-30">
                     <div
-                        className="flex flex-col items-center gap-16 px-4 md:px-8 py-12"
+                        className="flex flex-col items-center gap-16 "
                         style={{ color: "white", fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
                     >
                         <h2
@@ -69,6 +68,5 @@ export default function Contact() {
                     </div>
                 </div>
             </BackgroundBeamsWithCollision>
-        </div>
     );
 }

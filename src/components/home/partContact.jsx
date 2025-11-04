@@ -18,6 +18,7 @@ export default function ContactForm() {
     <BackgroundBeamsWithCollision>
       <div
         className="min-h-screen min-w-4xl flex flex-col items-center justify-center px-6"
+        id="contactForm"
         style={{
           color: "white",
           fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
