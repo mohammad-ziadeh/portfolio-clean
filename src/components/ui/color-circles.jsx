@@ -66,9 +66,9 @@ export const AnimatedTooltip = ({
                 }}
                 className="absolute -top-16 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center rounded-md  bg-[#0C0C0C] px-4 py-2 text-xs shadow-xl">
                 <div
-                  className="absolute inset-x-10 -bottom-px z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-[#3D0000] to-transparent" />
+                  className={`absolute inset-x-10 -bottom-px z-30 h-px w-[50%] bg-gradient-to-r from-transparent ${item.via} to-transparent`} />
                 <div
-                  className="absolute -bottom-px left-10 z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-[#3D0000] to-transparent" />
+                  className={`absolute -bottom-px left-10 z-30 h-px w-[50%] bg-gradient-to-r from-transparent ${item.via} to-transparent`} />
                 <div className="relative z-30 text-base font-bold text-white">
                   {item.name}
                 </div>

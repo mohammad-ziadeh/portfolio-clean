@@ -31,16 +31,19 @@ export default function ProjectLMC() {
       id: 1,
       name: "#040404",
       color: "#040404",
+      via: "via-[#040404]"
     },
     {
       id: 2,
       name: "#2B2C34",
       color: "#2B2C34",
+      via: "via-[#2B2C34]"
     },
     {
       id: 3,
       name: "#eeeeee",
       color: "#eeeeee",
+      via: "via-[#2B2C34]"
     },
 
   ];
@@ -57,7 +60,7 @@ export default function ProjectLMC() {
           width: '210px',
           height: '120px',
           margin: '0 auto',
-          marginBottom:"200px"
+          marginBottom: "200px"
         }}
       />
       <div className="max-w-[1250px] m-auto lg:ml-[70px] lg:mr-[70px] 2xl:m-auto mt-50 relative flex justify-center">

@@ -30,7 +30,7 @@ export const AnimatedTooltip = ({ items }) => {
         x: rect.left + rect.width -50 ,
         y: rect.top - 60,
       });
-    });
+    }); 
   };
 
   return (

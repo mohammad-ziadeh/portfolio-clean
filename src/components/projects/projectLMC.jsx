@@ -26,10 +26,18 @@ export default function ProjectLMC() {
   const words = ["LMC"];
 
   const colors = [
-    { id: 1, name: "#3b1e54", color: "#3b1e54" },
-    { id: 2, name: "#9b7ebd", color: "#9b7ebd" },
-    { id: 3, name: "#d4bee4", color: "#d4bee4" },
-    { id: 4, name: "#eeeeee", color: "#eeeeee" },
+    {
+      id: 1, name: "#3b1e54", color: "#3b1e54", via: "via-[#3b1e54]"
+    },
+    {
+      id: 2, name: "#9b7ebd", color: "#9b7ebd", via: "via-[#9b7ebd]"
+    },
+    {
+      id: 3, name: "#d4bee4", color: "#d4bee4", via: "via-[#d4bee4]"
+    },
+    {
+      id: 4, name: "#eeeeee", color: "#eeeeee", via: "via-[#eeeeee]"
+    },
   ];
 
   return (
