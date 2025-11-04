@@ -10,6 +10,7 @@ import Loadable from "./Loader/Loadable";
 const Home = Loadable(lazy(() => import("../views/home")));
 const About = Loadable(lazy(() => import("../views/about")));
 const Projects = Loadable(lazy(() => import("../views/projects")));
+const Contact = Loadable(lazy(() => import("../views/contact")));
 // -------{Public Side}------- //
 
 // ==============================|| MAIN ROUTES ||============================== //
@@ -29,6 +30,10 @@ const MainRoutes = {
     {
       path: "Projects",
       element: <Projects />,
+    },
+    {
+      path: "Contact",
+      element: <Contact />,
     },
   ],
 };

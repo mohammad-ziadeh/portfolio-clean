@@ -4,63 +4,15 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useForm, ValidationError } from "@formspree/react";
-import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
-export default function Contact() {
-  const [state, handleSubmitFormspree] = useForm("xdkpryje");
+export default function ContactForm() {
+  const [state, handleSubmit] = useForm("xdkpryje");
   const [email, setEmail] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 600 });
-
-    // Load reCAPTCHA v3 script invisibly
-    const script = document.createElement("script");
-    script.src = `https://www.google.com/recaptcha/api.js?render=6LeM8gEsAAAAAPdLWqlNNmtWvi43z2I7YFayx-9C`;
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
   }, []);
-
-  const placeholders = ["Enter your email"];
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!window.grecaptcha) {
-      console.error("reCAPTCHA not loaded");
-      return;
-    }
-
-    // Generate invisible reCAPTCHA v3 token
-    const token = await window.grecaptcha.execute(
-      "6LeM8gEsAAAAAPdLWqlNNmtWvi43z2I7YFayx-9C",
-      { action: "submit" }
-    );
-
-    // Append token to FormData
-    const formData = new FormData(e.target);
-    formData.append("g-recaptcha-response", token);
-
-    // Submit manually to Formspree
-    handleSubmitFormspree({
-      preventDefault: () => { }, // fake event for Formspree
-      target: { elements: formData },
-    });
-  };
-
-  if (state.succeeded) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-black">
-        <p className="text-white text-lg font-medium tracking-wide">
-          Thanks for reaching out!
-        </p>
-      </div>
-    );
-  }
 
   return (
     <BackgroundBeamsWithCollision>
@@ -78,15 +30,27 @@ export default function Contact() {
           Let’s Connect
         </h2>
 
+        {/* Success message */}
+        {state.succeeded && (
+          <p className="text-green-400 mb-4 font-medium">
+            Thanks for reaching out!
+          </p>
+        )}
+
         <form
           onSubmit={handleSubmit}
           data-aos="fade-up"
           className="w-full max-w-2xl flex flex-col items-center space-y-6 bg-zinc-900/30 border border-zinc-800 rounded-3xl p-10 shadow-lg backdrop-blur-md"
         >
-          <PlaceholdersAndVanishInput
-            placeholders={placeholders}
+          {/* Normal email input */}
+          <input
+            type="email"
+            name="email"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            className="w-full bg-black border border-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:border-gray-400 transition-all placeholder-gray-500"
           />
 
           <div className="w-full">
@@ -108,9 +72,6 @@ export default function Contact() {
           >
             {state.submitting ? "Sending..." : "Send Message"}
           </button>
-
-          <input type="hidden" name="email" value={email} />
-          <input type="hidden" name="g-recaptcha-response" value="" />
         </form>
       </div>
     </BackgroundBeamsWithCollision>

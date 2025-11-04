@@ -4,7 +4,7 @@ import StudyTimeline from "../components/home/StudyTimeline";
 import Hero from "../components/home/Hero";
 import TechStack from "../components/home/TechStack";
 import SparkAbout from "../components/home/sparkSection/sparkAbout";
-import Contact from "../components/home/partContact";
+import ContactForm from "../components/home/partContact";
 import "aos/dist/aos.css";
 import gsap from "gsap";
 import SplitType from "split-type";
@@ -96,7 +96,7 @@ const Home = () => {
 
         <SparkAbout />
         <StudyTimeline />
-        <Contact />
+        <ContactForm />
 
       </div>
 
