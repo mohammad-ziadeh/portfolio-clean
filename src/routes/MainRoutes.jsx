@@ -11,7 +11,7 @@ const Home = Loadable(lazy(() => import("../views/home")));
 const About = Loadable(lazy(() => import("../views/about")));
 const Projects = Loadable(lazy(() => import("../views/projects")));
 const Contact = Loadable(lazy(() => import("../views/contact")));
-const Practices = Loadable(lazy(() => import("../views/Practices")));
+const Practices = Loadable(lazy(() => import("../views/practices")));
 // -------{Public Side}------- //
 
 // ==============================|| MAIN ROUTES ||============================== //
