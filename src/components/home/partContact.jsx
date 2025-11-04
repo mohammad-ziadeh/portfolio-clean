@@ -31,7 +31,6 @@ export default function ContactForm() {
           Let’s Connect
         </h2>
 
-        {/* Success message */}
         {state.succeeded && (
           <p className="text-green-400 mb-4 font-medium">
             Thanks for reaching out!
@@ -41,9 +40,8 @@ export default function ContactForm() {
         <form
           onSubmit={handleSubmit}
           data-aos="fade-up"
-          className="w-full max-w-2xl flex flex-col items-center space-y-6 bg-zinc-900/30 border border-zinc-800 rounded-3xl p-10 shadow-lg backdrop-blur-md"
+          className="w-full max-w-2xl flex flex-col items-center space-y-6 bg-zinc-400/5 border border-zinc-800 rounded-3xl p-10 shadow-lg backdrop-blur-md"
         >
-          {/* Normal email input */}
           <input
             type="email"
             name="email"
