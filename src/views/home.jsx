@@ -91,16 +91,13 @@ const Home = () => {
         </h1>
 
         <TechStack />
-        <br /><br /><br />
-
-        <br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br />
+        <div className="mb-[80vh]"></div>
         <Hero />
 
         <SparkAbout />
         <StudyTimeline />
         <Contact />
-     
+
       </div>
 
       {/* Preloader */}
