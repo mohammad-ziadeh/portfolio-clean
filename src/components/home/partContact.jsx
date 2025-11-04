@@ -10,9 +10,7 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 export default function Contact() {
   const [state, handleSubmitFormspree] = useForm("xdkpryje");
   const [email, setEmail] = useState("");
-  const [recaptchaToken, setRecaptchaToken] = useState("");
 
-  // Load reCAPTCHA script
   useEffect(() => {
     AOS.init({ duration: 600 });
 
@@ -31,16 +29,28 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Generate reCAPTCHA token
-    if (window.grecaptcha) {
-      const token = await window.grecaptcha.execute("6LeM8gEsAAAAAPdLWqlNNmtWvi43z2I7YFayx-9C", { action: "submit" });
-      setRecaptchaToken(token);
-
-      // Add token to hidden input and submit Formspree
-      handleSubmitFormspree(e);
-    } else {
+    if (!window.grecaptcha) {
       console.error("reCAPTCHA not loaded");
+      return;
     }
+
+    // Generate reCAPTCHA token
+    const token = await window.grecaptcha.execute(
+      "6LeM8gEsAAAAAPdLWqlNNmtWvi43z2I7YFayx-9C",
+      { action: "submit" }
+    );
+
+    // Create a new FormData to include the token
+    const formData = new FormData(e.target);
+    formData.append("g-recaptcha-response", token);
+
+    // Submit to Formspree manually
+    handleSubmitFormspree({
+      preventDefault: () => { }, // fake event, Formspree expects event-like object
+      target: {
+        elements: formData,
+      },
+    });
   };
 
   if (state.succeeded) {
@@ -101,7 +111,6 @@ export default function Contact() {
           </button>
 
           <input type="hidden" name="email" value={email} />
-          <input type="hidden" name="g-recaptcha-response" value={recaptchaToken} />
         </form>
       </div>
     </BackgroundBeamsWithCollision>
