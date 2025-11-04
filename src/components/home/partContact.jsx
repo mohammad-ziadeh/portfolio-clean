@@ -14,6 +14,7 @@ export default function Contact() {
   useEffect(() => {
     AOS.init({ duration: 600 });
 
+    // Load reCAPTCHA v3 script invisibly
     const script = document.createElement("script");
     script.src = `https://www.google.com/recaptcha/api.js?render=6LeM8gEsAAAAAPdLWqlNNmtWvi43z2I7YFayx-9C`;
     script.async = true;
@@ -34,22 +35,20 @@ export default function Contact() {
       return;
     }
 
-    // Generate reCAPTCHA token
+    // Generate invisible reCAPTCHA v3 token
     const token = await window.grecaptcha.execute(
       "6LeM8gEsAAAAAPdLWqlNNmtWvi43z2I7YFayx-9C",
       { action: "submit" }
     );
 
-    // Create a new FormData to include the token
+    // Append token to FormData
     const formData = new FormData(e.target);
     formData.append("g-recaptcha-response", token);
 
-    // Submit to Formspree manually
+    // Submit manually to Formspree
     handleSubmitFormspree({
-      preventDefault: () => { }, // fake event, Formspree expects event-like object
-      target: {
-        elements: formData,
-      },
+      preventDefault: () => { }, // fake event for Formspree
+      target: { elements: formData },
     });
   };
 
@@ -111,6 +110,7 @@ export default function Contact() {
           </button>
 
           <input type="hidden" name="email" value={email} />
+          <input type="hidden" name="g-recaptcha-response" value="" />
         </form>
       </div>
     </BackgroundBeamsWithCollision>
