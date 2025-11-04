@@ -27,7 +27,8 @@ export default function App() {
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
     { label: 'About', ariaLabel: 'Learn about us', link: '/About' },
     { label: 'Projects', ariaLabel: 'View our services', link: '/Projects' },
-    { label: 'Contact', ariaLabel: 'Get in touch', link: '/Contact' }
+    { label: 'Contact', ariaLabel: 'Get in touch', link: '/Contact' },
+    { label: 'Practices', ariaLabel: 'Get in touch', link: '/Practices' }
   ];
 
 
