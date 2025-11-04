@@ -30,7 +30,7 @@ export function Android({
           d="M9.25 48C9.25 29.3604 24.3604 14.25 43 14.25H335C353.64 14.25 368.75 29.3604 368.75 48V780C368.75 798.64 353.64 813.75 335 813.75H43C24.3604 813.75 9.25 798.64 9.25 780V48Z"
           className=" stroke-[0.5] fill-[#404040] stroke-[#404040]" />
       </g>
-      <circle cx="189" cy="28" r="9" className="fill-[#262626]" />
+      <circle cx="189" cy="28" r="9" className="fill-[#262626]J" />
       <circle cx="189" cy="28" r="4" className="fill-[#404040]" />
       {src && (
         <image

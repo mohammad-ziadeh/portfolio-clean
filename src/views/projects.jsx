@@ -26,7 +26,7 @@ const Projects = () => {
             onClick: () => setActiveTab("3X3"),
         },
         {
-            label: "soon1",
+            label: "soon",
             ariaLabel: "Soon1",
             rotation: 8,
             hoverStyles: { bgColor: "#3D0000", textColor: "#ffffff" },
@@ -35,7 +35,7 @@ const Projects = () => {
             onClick: () => setActiveTab("soon1"),
         },
         {
-            label: "soon2",
+            label: "soon",
             ariaLabel: "Soon2",
             rotation: 0,
             hoverStyles: { bgColor: "#3D0000", textColor: "#ffffff" },
@@ -43,7 +43,7 @@ const Projects = () => {
             onClick: () => setActiveTab("soon2"),
         },
         {
-            label: "soon3",
+            label: "soon",
             ariaLabel: "Soon3",
             rotation: 0,
             hoverStyles: { bgColor: "#3D0000", textColor: "#ffffff" },

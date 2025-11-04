@@ -57,6 +57,7 @@ export default function ProjectLMC() {
           width: '210px',
           height: '120px',
           margin: '0 auto',
+          marginBottom:"200px"
         }}
       />
       <div className="max-w-[1250px] m-auto lg:ml-[70px] lg:mr-[70px] 2xl:m-auto mt-50 relative flex justify-center">
