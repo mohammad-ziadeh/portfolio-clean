@@ -6,13 +6,27 @@ import Loadable from "./Loader/Loadable";
 
 // Lazy-loaded components
 
+
+// ----
 // -------{Public Side}------- //
+// ----
+
 const Home = Loadable(lazy(() => import("../views/home")));
 const About = Loadable(lazy(() => import("../views/about")));
 const Projects = Loadable(lazy(() => import("../views/projects")));
 const Contact = Loadable(lazy(() => import("../views/contact")));
+
+// -- {practices pages} -- //
 const Practices = Loadable(lazy(() => import("../views/practices")));
+const GSAP = Loadable(lazy(() => import("../components/practices/gsapScroll")));
+const Motion = Loadable(lazy(() => import("../components/practices/motion")));
+// -- {practices pages} -- //
+
+
+
+// ----
 // -------{Public Side}------- //
+// ----
 
 // ==============================|| MAIN ROUTES ||============================== //
 
@@ -37,8 +51,18 @@ const MainRoutes = {
       element: <Contact />,
     },
     {
-      path: "Practices",
+      path: "Tests",
       element: <Practices />,
+      children: [
+        {
+          path: "gsap",
+          element: <GSAP />,
+        },
+        {
+          path: "motion",
+          element: <Motion />,
+        },
+      ]
     },
   ],
 };

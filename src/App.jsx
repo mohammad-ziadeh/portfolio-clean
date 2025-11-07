@@ -28,7 +28,7 @@ export default function App() {
     { label: 'About', ariaLabel: 'Learn about us', link: '/About' },
     { label: 'Projects', ariaLabel: 'View our services', link: '/Projects' },
     { label: 'Contact', ariaLabel: 'Get in touch', link: '/Contact' },
-    { label: 'Practices', ariaLabel: 'Get in touch', link: '/Practices' }
+    { label: 'Tests', ariaLabel: 'Get in touch', link: '/Tests' }
   ];
 
 
@@ -52,7 +52,7 @@ export default function App() {
           openMenuButtonColor="#000"
           changeMenuColorOnOpen={true}
           colors={['#1E201E', '#3D0000']}
-          logoUrl="images/pfp.png"
+          logoUrl="/images/pfp.png"
           accentColor="#8E1616"
         // onMenuOpen={() => console.log('Menu opened')}
         // onMenuClose={() => console.log('Menu closed')}

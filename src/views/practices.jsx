@@ -1,124 +1,64 @@
-import React, { useRef, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+"use client";
+import React from "react";
+import { PinContainer } from "@/components/ui/3d-pin";
+import { Outlet } from "react-router-dom";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Practices() {
+    const url = window.location.pathname;
 
-    const pinnedElementRef = useRef(null);
-    const pinnedElementRef2 = useRef(null);
+    const projects = [
+        { title: 'GSAP', desc: 'Experimenting with GSAP ScrollTrigger', link: '/Tests/gsap', video: '/videos/gsap.mp4' },
+        { title: 'Motion', desc: 'Experimenting with Motion useScroll', link: '/Tests/motion', video: '/videos/motion.mp4' },
+        // { title: 'Home', desc: 'Go to home page', link: 'Tests/gsap', video: '/videos/motion.mp4' },
+        // { title: 'Home', desc: 'Go to home page', link: 'Tests/gsap', video: '/videos/motion.mp4' },
 
-    useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
-            ScrollTrigger.create({
-                trigger: pinnedElementRef.current,
-                pin: true,
-                start: "top 300px",
-                end: "+=700",
-                markers: true,
-            });
-            ScrollTrigger.create({
-                trigger: pinnedElementRef2.current,
-                pin: true,
-                start: "top 300px",
-                end: "+=700",
-                markers: true,
-            });
-        }, pinnedElementRef, pinnedElementRef2);
-
-        return () => ctx.revert()
-    }, []);
-
-
-
+    ];
 
     return (
-
-
-        <div className="relative min-h-screen mt-100">
-
-            <h2 className="text-2xl text-center text-white mb-80">This page is for u to watch my experiments and practices for animation </h2>
-            <h2 className="text-2xl text-center text-white">Practicing GSAP: scroll triggers</h2>
-
-            <div className="mt-150"></div>
-
-
-            <div ref={pinnedElementRef} className="left-0 w-[48vw] lg:h-[500px] ml-[2vw] mr-[1vw] relative">
-                <img src="https://picsum.photos/800/500?grayscale" alt="LMC Project Image 9" />
-                <div
+        <>
+            <h2 className="text-3xl text-center text-white mt-50 ">This page is for u to watch my experiments and practices for animation </h2>
+            {url == "/Tests" ? <div></div>
+                : <DotLottieReact
+                    src="/lottie/Scroll_Down_Arrows.json"
+                    loop
+                    autoplay
                     style={{
-                        position: "absolute",
-                        left: 0,
-                        right: 0,
-                        bottom: -20,
-                        height: "500px",
-                        width: "100%",
-                        backdropFilter: "blur(0.5px)",
-                        WebkitBackdropFilter: "blur(0.5px)",
-                        background: "linear-gradient(to top, rgba(0,0,0,6), transparent)",
-                        zIndex: 9,
+                        width: '210px',
+                        height: '120px',
+                        margin: '0 auto',
+                        marginTop: "20px",
                     }}
-                >
-                </div>
-            </div>
+                />}
+            <section className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 mt-30 ">
+                {projects.map((project, i) => (
+                    <div className="h-[30rem] w-full flex items-center justify-center " key={project.title + i}>
+                        <PinContainer
+                            title={project.title}
+                            href={project.link}
+                        >
+                            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 xl:w-[25rem] xl xl:h-[18rem] 2xl:w-[30rem] 2xl:h-[20rem]  w-[30rem] h-[20rem] ">
+                                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                                    {project.title}
+                                </h3>
+                                <div className="text-base !m-0 !p-0 font-normal">
+                                    <span className="text-slate-500 ">
+                                        {project.desc}
+                                    </span>
+                                </div>
 
-            <div className=" float-end w-[47vw] lg:h-[500px] mr-[2vw] ml-[1vw] -mt-[500px] relative" ref={pinnedElementRef2}>
-                <img src="https://picsum.photos/800/500?grayscale" alt="LMC Project Image 8" />
-                <div
-                    style={{
-                        position: "absolute",
-                        left: 0,
-                        right: 0,
-                        bottom: -20,
-                        height: "500px",
-                        width: "100%",
-                        backdropFilter: "blur(0.5px)",
-                        WebkitBackdropFilter: "blur(0.5px)",
-                        background: "linear-gradient(to top, rgba(0,0,0,6), transparent)",
-                        zIndex: 9,
-                    }}
-                >
-                </div>
-            </div>
-
-
-
-            <div style={{ height: '100vh', background: 'black' }}>More content below</div>
+                                <video src={project.video} muted loop autoPlay className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+                            </div>
+                        </PinContainer>
+                    </div>
+                ))}
+            </section>
 
 
+            <div className="border-b-1 mt-10 border-[#ffffff63]"></div>
 
+            <Outlet />
 
-        </div>
-
-    )
+        </>
+    );
 }
-
-
-
-
-// let tl = gsap.timeline({
-//     // yes, we can add it to an entire timeline!
-//     scrollTrigger: {
-//         trigger: '.container',
-//         pin: true, // pin the trigger element while active
-//         start: 'top top', // when the top of the trigger hits the top of the viewport
-//         end: '+=500', // end after scrolling 500px beyond the start
-//         scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-//         snap: {
-//             snapTo: 'labels', // snap to the closest label in the timeline
-//             duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-//             delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-//             ease: 'power1.inOut' // the ease of the snap animation ("power3" by default)
-//         }
-//     }
-// });
-
-// // add animations and labels to the timeline
-// tl.addLabel('start')
-//     .from('.box p', { scale: 0.3, rotation: 45, autoAlpha: 0 })
-//     .addLabel('color')
-//     .from('.box', { backgroundColor: '#28a92b' })
-//     .addLabel('spin')
-//     .to('.box', { rotation: 360 })
-//     .addLabel('end');
