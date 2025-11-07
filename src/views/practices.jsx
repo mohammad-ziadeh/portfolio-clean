@@ -47,7 +47,7 @@ export default function Practices() {
                                     </span>
                                 </div>
 
-                                <video src={project.video} muted loop autoPlay className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+                                <video src={project.video} muted loop autoPlay className="flex flex-1 w-full mt-4" />
                             </div>
                         </PinContainer>
                     </div>
