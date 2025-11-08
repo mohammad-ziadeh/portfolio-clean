@@ -22,21 +22,21 @@ export default function GSAP() {
                 pin: true,
                 start: "top 300px",
                 end: "+=800",
-                markers: false,
+                markers: true,
             });
             ScrollTrigger.create({
                 trigger: pinnedElementRef2.current,
                 pin: true,
                 start: "top 300px",
                 end: "+=700",
-                markers: false,
+                markers: true,
             });
             ScrollTrigger.create({
                 trigger: pinnedElementRef3.current,
                 pin: true,
                 start: "top 500px",
                 end: "+=600",
-                markers: false,
+                markers: true,
                 onLeave: () => {
                     controls.start({ scale: 1200 });
                 },

@@ -88,7 +88,17 @@ export default function GSAP() {
 
             <div className="h-[100vh]  ">
 
+                <motion.div
+                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: 0 }}
+                    exit={{ opacity: 0 }}
+                    drag whileDrag={{ scale: 0.9 }}
+                    dragConstraints={{ left: 0, right: 900, top: 0, bottom: 500 }}
 
+                    className="relative top-50 w-[15%] h-[15%]"
+                >
+                    <div className="bg-yellow-50 w-70 h-70 m-auto"></div>
+                </motion.div>
             </div>
 
         </div>
