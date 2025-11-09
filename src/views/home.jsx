@@ -94,7 +94,7 @@ const Home = () => {
         <div className="mb-[80vh]"></div>
         <Hero />
 
-        <SparkAbout />
+        {/* <SparkAbout /> */}
         <StudyTimeline />
         <ContactForm />
 

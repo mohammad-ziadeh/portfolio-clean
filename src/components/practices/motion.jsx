@@ -2,11 +2,12 @@ import React, { useRef, useLayoutEffect } from 'react';
 import { useScroll, useTransform, motion, useAnimation } from "framer-motion";
 
 
-export default function GSAP() {
+export default function Motion() {
     const controls = useAnimation();
 
     const container1 = useRef(null);
     const container2 = useRef(null);
+    const container3 = useRef(null);
 
 
     const { scrollYProgress: scroll1 } = useScroll({
@@ -24,7 +25,11 @@ export default function GSAP() {
     const scale2 = useTransform(scroll2, [0, 1], [1, 500]);
 
 
-
+    const { scrollYProgress: scrollYProgress } = useScroll({
+        target: container3,
+        offset: ["start start", "end end"],
+    });
+    const marginLeft1 = useTransform(scrollYProgress, [0, 1], ["125px", "500px"]);
 
 
 
@@ -101,6 +106,18 @@ export default function GSAP() {
                 </motion.div>
             </div>
 
+
+
+
+            <section className="flex w-full items-center justify-center overflow-hidden h-[200vh]" ref={container3}>
+
+                <motion.h2
+                    style={{ marginLeft: marginLeft1 }}
+                    className="relative text-white text-3xl"
+                >
+                    hello
+                </motion.h2>
+            </section>
         </div>
 
     )

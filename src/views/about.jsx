@@ -7,11 +7,11 @@ const About = () => {
 
     return (
         <div className="mt-90">
-            <h2 className="text-4xl text-center text-white">Soon....</h2>
-            {/* <h2 className="text-4xl text-center text-white">Hello there</h2>
+            {/* <h2 className="text-4xl text-center text-white">Soon....</h2> */}
+            <h2 className="text-4xl text-center text-white">Hello there</h2>
             <br />
-            <p className="text-2xl text-center text-white">If you are here this mean that u want to know more about me.</p>
-            <p className="text-2xl text-center text-white">If yes then keep scrolling </p>
+            <p className="text-2xl text-center text-white">Glad you’re here — I guess you’d like to know a bit more about me.</p>
+            <p className="text-2xl text-center text-white">If yes then start scrolling </p>
             <DotLottieReact
                 src="/lottie/Scroll_Down_Arrows.json"
                 loop
@@ -24,7 +24,7 @@ const About = () => {
                     marginBottom: "50vh"
                 }}
             />
-            <Top /> */}
+            <Top />
         </div>
     );
 };
